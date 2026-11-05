@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel Rampage — Hano Games</title>
+<meta name="description" content="Pixel Rampage — аркада про разрушение картинок. Четыре оружия, осколки, монеты и магазин. Бесплатно.">
+<meta property="og:title" content="Pixel Rampage">
+<meta property="og:description" content="Разрушь картинку до последнего пикселя.">
+<meta property="og:image" content="https://hano-games.netlify.app/img/cover-800x470_en.webp">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="470">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/dotgothic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="game">
+<div id="starfield" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="index.html">
+      <img src="img/logo.png" alt="" width="34" height="34">
+      <span>Hano Games</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#portfolio" data-i18n="nav.games">Игры</a>
+      <a href="index.html#about" data-i18n="nav.about">Обо мне</a>
+      <a href="index.html#support" data-i18n="nav.support">Поддержать</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main class="wrap game-page">
+  <a class="back" href="index.html#portfolio" data-i18n="game.back">← Все игры</a>
+
+  <div class="game-head">
+    <div>
+      <span class="tag" data-i18n="game.tag">Аркада · ПК · Браузер</span>
+      <h1>Pixel Rampage</h1>
+      <p class="lead" data-i18n="game.lead">Разрушь картинку до последнего пикселя. Летай на джетпаке, выбирай оружие и смотри, как изображение рассыпается на осколки, а внизу растёт куча обломков.</p>
+      <div class="actions">
+        <button class="btn primary" type="button" data-action="play" data-i18n="btn.play">Играть в браузере</button>
+        <button class="btn ghost" type="button" data-action="download" data-i18n="btn.download">Скачать для Windows</button>
+      </div>
+      <p class="note" data-i18n="game.download.note">Windows 10/11 · zip · 39 МБ</p>
+      <p class="note">
+        <a href="https://github.com/HanoSoullsGames/pixel-rampage/releases/tag/v0.2.0"
+           target="_blank" rel="noopener" data-i18n="game.download.fallback">Если скачивание не началось — страница релиза</a>
+      </p>
+    </div>
+  </div>
+
+  <figure class="shot-main">
+    <img data-shot="01_destruction" alt="Pixel Rampage — разрушение картинки">
+  </figure>
+
+  <section class="block">
+    <h2 data-i18n="game.features.title">Особенности</h2>
+    <ul class="features">
+      <li data-i18n="game.f1">Четыре оружия: дробовик, автомат, бомбы и лазер</li>
+      <li data-i18n="game.f2">23 картинки — от кота на закате до ночного города</li>
+      <li data-i18n="game.f3">Прокачка оружия и скины персонажа</li>
+      <li data-i18n="game.f4">Свои картинки: добавь любую фотографию</li>
+      <li data-i18n="game.f5">Монеты, магазин и орбитальный удар</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="game.shots.title">Скриншоты</h2>
+    <div class="gallery">
+      <img data-shot="02_laser_orbital_strike" alt="" loading="lazy">
+      <img data-shot="03_victory" alt="" loading="lazy">
+      <img data-shot="04_levels" alt="" loading="lazy">
+      <img data-shot="05_shop_skins" alt="" loading="lazy">
+      <img data-shot="06_shop_weapons" alt="" loading="lazy">
+      <img data-shot="01_destruction" alt="" loading="lazy">
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="game.specs.title">Детали</h2>
+    <dl class="specs">
+      <div><dt data-i18n="specs.engine">Движок</dt><dd>Unity</dd></div>
+      <div><dt data-i18n="specs.platform">Платформы</dt><dd data-i18n="specs.platform.value">Windows, браузер</dd></div>
+      <div><dt data-i18n="specs.lang">Языки</dt><dd data-i18n="specs.lang.value">Русский, английский</dd></div>
+      <div><dt data-i18n="specs.price">Цена</dt><dd data-i18n="specs.price.value">Бесплатно</dd></div>
+      <div><dt data-i18n="specs.year">Год</dt><dd>2026</dd></div>
+    </dl>
+    <p class="note" data-i18n="game.note">В браузере нельзя добавить свою картинку — это ограничение браузера. В ПК-версии импорт работает.</p>
+  </section>
+
+  <section class="block support-panel" id="support">
+    <div>
+      <h2 data-i18n="support.title">Поддержать</h2>
+      <p data-i18n="support.text">Игры бесплатные. Если хочется отблагодарить — можно поддержать на Boosty. Это помогает делать следующие.</p>
+    </div>
+    <button class="btn primary" type="button" data-action="support" data-i18n="btn.support">Поддержать на Boosty</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Hano Games</span>
+    <span class="foot-links">
+      <a href="https://github.com/HanoSoullsGames/pixel-rampage" target="_blank" rel="noopener">GitHub</a>
+      <span data-i18n="footer.made">Сделано вручную. С любовью к пикселям.</span>
+    </span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

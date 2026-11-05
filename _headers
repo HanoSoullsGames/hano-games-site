@@ -1,0 +1,38 @@
+# Netlify / Cloudflare Pages: заголовки для сжатой WebGL-сборки.
+# Файлы .br обязательно отдавать с Content-Encoding, иначе браузер их не распакует.
+# Папка сборки может меняться (Build, Build2, ...), поэтому путь через *.
+
+/game/*/*.wasm.br
+  Content-Encoding: br
+  Content-Type: application/wasm
+  Cache-Control: public, max-age=0, must-revalidate
+
+/game/*/*.js.br
+  Content-Encoding: br
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=0, must-revalidate
+
+/game/*/*.data.br
+  Content-Encoding: br
+  Content-Type: application/octet-stream
+  Cache-Control: public, max-age=0, must-revalidate
+
+/game/*/*.br
+  Content-Encoding: br
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Обновления игры должны доезжать до игроков сразу, а не через год
+/game/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/img/*
+  Cache-Control: public, max-age=86400
+
+/fonts/*
+  Cache-Control: public, max-age=604800
+
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate

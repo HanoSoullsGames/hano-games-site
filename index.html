@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hano Games — независимый разработчик</title>
+<meta name="description" content="Hano Games — независимый разработчик игр из Беларуси. Вдыхаю жизнь в пиксели и код: механики, код, интерфейс, сборка. Портфолио: Pixel Rampage и следующие проекты.">
+<meta property="og:title" content="Hano Games">
+<meta property="og:description" content="Независимый разработчик из Беларуси. Вдыхаю жизнь в пиксели и код.">
+<meta property="og:image" content="https://hano-games.netlify.app/img/og-home-ru.png">
+<meta property="og:image:alt" content="Вдыхаю жизнь в пиксели и код">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://hano-games.netlify.app/">
+<link rel="canonical" href="https://hano-games.netlify.app/">
+<link rel="alternate" hreflang="ru" href="https://hano-games.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://hano-games.netlify.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://hano-games.netlify.app/">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/dotgothic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<div id="starfield" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="index.html">
+      <img src="img/logo.png" alt="" width="34" height="34">
+      <span>Hano Games</span>
+    </a>
+    <nav class="nav">
+      <a href="#portfolio" data-i18n="nav.games">Игры</a>
+      <a href="#about" data-i18n="nav.about">Обо мне</a>
+      <a href="#support" data-i18n="nav.support">Поддержать</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker" data-i18n="hero.kicker">Независимый разработчик</p>
+        <h1 data-i18n="hero.title">Hano Games</h1>
+        <p class="tagline" data-i18n="hero.tagline">Вдыхаю жизнь в пиксели и код.</p>
+        <p class="bio" data-i18n="hero.bio">Меня зовут Hano, я разработчик из Беларуси. Разрабатываю игры на Unity — от первой идеи до финальной сборки.</p>
+        <div class="actions">
+          <a class="btn primary" href="#portfolio" data-i18n="btn.games">Смотреть игры</a>
+          <button class="btn ghost" type="button" data-action="support" data-i18n="btn.support">Поддержать на Boosty</button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="img/logo.png" alt="Hano Games" width="240" height="240">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <h2 data-i18n="about.title">Обо мне</h2>
+      <div class="about-grid">
+        <div class="about">
+          <p data-i18n="about.text1">Я инди-разработчик из Беларуси. С детства любил играть в игры и решил пополнить геймдев своими творениями. Создаю игры на движке Unity: придумываю механики, пишу код, собираю интерфейс и довожу проект до сборки.</p>
+          <p data-i18n="about.text2">Люблю разные жанры игр. Стараюсь делать игры с интересной механикой или цепляющим визуалом. Арт для проектов заказываю у художников — сам отвечаю за то, чтобы всё работало и складывалось в единую картину, чтобы вам было интересно скоротать время.</p>
+          <p data-i18n="about.text3">Пока в портфолио одна игра, но это только начало.</p>
+        </div>
+        <ul class="skills">
+          <li data-i18n="skills.gamedesign">Game design</li>
+          <li data-i18n="skills.unity">Unity и C#</li>
+          <li data-i18n="skills.gameplay">Геймплей и механики</li>
+          <li data-i18n="skills.ui">UI и интерфейсы</li>
+          <li data-i18n="skills.optimization">Оптимизация</li>
+          <li data-i18n="skills.release">Сборка и релиз</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <h2 data-i18n="portfolio.title">Портфолио</h2>
+      <p class="sub" data-i18n="portfolio.sub">Игры, которые можно поиграть прямо сейчас!</p>
+
+      <div class="portfolio">
+        <a class="game-card" href="game.html">
+          <div class="game-card-art">
+            <img src="img/cover-800x470_en.webp" alt="Pixel Rampage">
+          </div>
+          <div class="game-card-body">
+            <span class="tag" data-i18n="game.tag">Аркада · ПК · Браузер</span>
+            <h3>Pixel Rampage</h3>
+            <p data-i18n="game.short">Аркада про разрушение картинок: четыре оружия, осколки, монеты и магазин.</p>
+            <span class="more" data-i18n="game.open">Подробнее →</span>
+          </div>
+        </a>
+
+        <div class="game-card soon-card">
+          <div class="soon-inner">
+            <span class="tag" data-i18n="portfolio.soon.tag">В разработке</span>
+            <h3 data-i18n="portfolio.soon.title">Следующая игра</h3>
+            <p data-i18n="portfolio.soon.text">Пока в заметках. Как только появится что показать — будет здесь.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="support">
+    <div class="wrap">
+      <div class="support-panel">
+        <div>
+          <h2 data-i18n="support.title">Поддержать</h2>
+          <p data-i18n="support.text">Игры бесплатные. Если хочется отблагодарить меня — можно поддержать на Boosty. Это помогает делать следующие игры.</p>
+        </div>
+        <button class="btn primary" type="button" data-action="support" data-i18n="btn.support">Поддержать на Boosty</button>
+      </div>
+      <p class="note" data-i18n="support.note">Ссылка на Boosty скоро появится.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Hano Games</span>
+    <span class="foot-links">
+      <a href="https://github.com/HanoSoullsGames/pixel-rampage" target="_blank" rel="noopener">GitHub</a>
+      <a href="en/index.html" hreflang="en">English version</a>
+      <span data-i18n="footer.made">Сделано вручную. С любовью к пикселям.</span>
+    </span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
