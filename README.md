@@ -37,6 +37,7 @@ _headers            заголовки для Netlify (Content-Encoding для .
 
 - Сайт: https://hano-games.netlify.app
 - itch.io: https://hanosoulls.itch.io/pixel-rampage
+- Boosty: https://boosty.to/hano.games
 - GitHub Releases: https://github.com/HanoSoullsGames/pixel-rampage/releases
 - Метрика: счётчик 114110153
 
