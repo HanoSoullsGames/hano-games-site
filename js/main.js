@@ -9,9 +9,9 @@ const PLAY_URL = 'game/index.html'; // WebGL-сборка лежит в папк
 
 // контакты: заполни нужное, пустые пункты не показываются
 const CONTACTS = {
-  telegram: '', // ник без @, например 'hanosouls'
-  email: '',    // например 'hi@hanogames.com'
-  vk: ''        // например 'hanogames'
+  telegram: 'HanoSoulls',        // https://t.me/HanoSoulls
+  email: 'hanosoullsgames@gmail.com',
+  vk: ''
 };
 
 // страница может лежать во вложенной папке (например /en/)
