@@ -76,6 +76,7 @@ const I18N = {
     'game.note': 'В браузере нельзя добавить свою картинку — это ограничение браузера. В ПК-версии импорт работает.',
     'game.download.note': 'Windows 10/11 · zip · 39 МБ',
     'game.download.fallback': 'Если скачивание не началось — страница релиза',
+    'game.trailer.note': 'Трейлер. Переключается вместе с языком сайта.',
 
     'specs.engine': 'Движок',
     'specs.platform': 'Платформы',
@@ -154,6 +155,7 @@ const I18N = {
     'game.note': 'The browser version cannot import your own pictures — that is a browser limitation. The PC version supports it.',
     'game.download.note': 'Windows 10/11 · zip · 39 MB',
     'game.download.fallback': 'If the download did not start — open the release page',
+    'game.trailer.note': 'Trailer. Switches together with the site language.',
 
     'specs.engine': 'Engine',
     'specs.platform': 'Platforms',
@@ -223,6 +225,17 @@ function applyLang() {
   document.querySelectorAll('[data-shot]').forEach(img => {
     img.src = `${ROOT}img/shots/${lang}-${img.dataset.shot}.webp`;
   });
+
+  // трейлер: своя версия под каждый язык
+  const trailer = document.getElementById('trailer');
+  if (trailer && trailer.dataset.lang !== lang) {
+    const wasPlaying = !trailer.paused && !trailer.ended;
+    trailer.dataset.lang = lang;
+    trailer.poster = `${ROOT}media/poster-${lang}.jpg`;
+    trailer.src = `${ROOT}media/trailer-${lang}.mp4`;
+    trailer.load();
+    if (wasPlaying) trailer.play().catch(() => {});
+  }
 
   const button = document.getElementById('lang');
   if (button) button.textContent = lang === 'ru' ? 'EN' : 'RU';

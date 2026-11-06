@@ -486,6 +486,32 @@ h2::before {
   display: block;
 }
 
+/* трейлер */
+.video-block { margin: 30px 0 0; }
+
+.video-frame {
+  border: 2px solid var(--line);
+  background: #000;
+  aspect-ratio: 16 / 9;
+  line-height: 0;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.video-frame:hover {
+  border-color: rgba(255, 159, 28, 0.55);
+  box-shadow: 0 0 26px rgba(255, 159, 28, 0.12);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.video-block .note { margin-top: 10px; }
+
 .block { margin-top: 56px; }
 
 .features {
