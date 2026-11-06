@@ -33,6 +33,13 @@ _headers            заголовки для Netlify (Content-Encoding для .
 3. GitHub → Releases → новый тег (`v0.3.0` и т.д.) → прикрепить zip.
 4. В `js/main.js` обновить `DOWNLOAD_URL` на новый тег.
 
+## Ссылки
+
+- Сайт: https://hano-games.netlify.app
+- itch.io: https://hanosoulls.itch.io/pixel-rampage
+- GitHub Releases: https://github.com/HanoSoullsGames/pixel-rampage/releases
+- Метрика: счётчик 114110153
+
 ## Локальный просмотр
 
 Запустить `serve_site.py` из корня workspace — сайт на `http://127.0.0.1:8099`.
