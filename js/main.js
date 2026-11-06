@@ -3,7 +3,7 @@
    Ссылки ниже пока пустые: вставь их, когда будут готовы.
    ============================================================ */
 
-const SUPPORT_URL = '';   // например: 'https://boosty.to/hanosouls'
+const SUPPORT_URL = 'https://boosty.to/hano.games';
 const DOWNLOAD_URL = 'https://github.com/HanoSoullsGames/pixel-rampage/releases/download/v0.2.0/PixelRampage-Windows.zip';
 const PLAY_URL = 'game/index.html'; // WebGL-сборка лежит в папке game
 
@@ -79,7 +79,7 @@ const I18N = {
     'nf.home': 'На главную',
     'btn.share': 'Поделиться',
     'toast.copied': 'Ссылка скопирована',
-    'support.note': 'Ссылка на Boosty скоро появится.',
+    'support.note': 'Поддержка идёт на арт, музыку и следующую игру.',
 
     'footer.made': 'Сделано вручную. С любовью к пикселям.',
 
@@ -161,7 +161,7 @@ const I18N = {
 
     'support.title': 'Support',
     'support.text': 'Games are free. If you would like to thank me, you can support me on Boosty. It helps make the next games.',
-    'support.note': 'The Boosty link is coming soon.',
+    'support.note': 'Support goes into art, music and the next game.',
 
     'contact.title': 'Get in touch',
     'contact.sub': 'Open to offers: a game commission, collaboration, or just a question.',
