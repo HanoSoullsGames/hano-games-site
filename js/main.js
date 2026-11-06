@@ -76,7 +76,9 @@ const I18N = {
     'game.note': 'В браузере нельзя добавить свою картинку — это ограничение браузера. В ПК-версии импорт работает.',
     'game.download.note': 'Windows 10/11 · zip · 39 МБ',
     'game.download.fallback': 'Если скачивание не началось — страница релиза',
-    'game.trailer.note': 'Трейлер. Переключается вместе с языком сайта.',
+    'game.trailer.note': 'Трейлер без звука — включи кнопкой в углу.',
+    'game.trailer.sound': 'Включить звук',
+    'game.trailer.mute': 'Выключить звук',
 
     'specs.engine': 'Движок',
     'specs.platform': 'Платформы',
@@ -155,7 +157,9 @@ const I18N = {
     'game.note': 'The browser version cannot import your own pictures — that is a browser limitation. The PC version supports it.',
     'game.download.note': 'Windows 10/11 · zip · 39 MB',
     'game.download.fallback': 'If the download did not start — open the release page',
-    'game.trailer.note': 'Trailer. Switches together with the site language.',
+    'game.trailer.note': 'Trailer plays muted — turn the sound on with the button in the corner.',
+    'game.trailer.sound': 'Sound on',
+    'game.trailer.mute': 'Sound off',
 
     'specs.engine': 'Engine',
     'specs.platform': 'Platforms',
@@ -226,15 +230,19 @@ function applyLang() {
     img.src = `${ROOT}img/shots/${lang}-${img.dataset.shot}.webp`;
   });
 
-  // трейлер: своя версия под каждый язык
+  // трейлер: своя версия под каждый язык, автозапуск без звука
   const trailer = document.getElementById('trailer');
   if (trailer && trailer.dataset.lang !== lang) {
-    const wasPlaying = !trailer.paused && !trailer.ended;
     trailer.dataset.lang = lang;
     trailer.poster = `${ROOT}media/poster-${lang}.jpg`;
     trailer.src = `${ROOT}media/trailer-${lang}.mp4`;
     trailer.load();
-    if (wasPlaying) trailer.play().catch(() => {});
+    playTrailer(trailer);
+  }
+
+  const soundButton = document.getElementById('sound-toggle');
+  if (soundButton) {
+    soundButton.textContent = t(trailer && !trailer.muted ? 'game.trailer.mute' : 'game.trailer.sound');
   }
 
   const button = document.getElementById('lang');
@@ -303,6 +311,35 @@ if (langButton && langButton.tagName === 'BUTTON') {
 }
 
 applyLang();
+
+/* ---------- трейлер: звук и пауза ---------- */
+
+function playTrailer(video) {
+  if (!video) return;
+  // если человек просил меньше анимаций — не запускаем сами
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const attempt = video.play();
+  if (attempt && attempt.catch) attempt.catch(() => {});
+}
+
+const trailerVideo = document.getElementById('trailer');
+const soundButton = document.getElementById('sound-toggle');
+
+if (trailerVideo && soundButton) {
+  soundButton.addEventListener('click', () => {
+    trailerVideo.muted = !trailerVideo.muted;
+    if (!trailerVideo.muted) {
+      const attempt = trailerVideo.play();
+      if (attempt && attempt.catch) attempt.catch(() => {});
+    }
+    soundButton.textContent = t(trailerVideo.muted ? 'game.trailer.sound' : 'game.trailer.mute');
+  });
+
+  trailerVideo.addEventListener('click', () => {
+    if (trailerVideo.paused) playTrailer(trailerVideo);
+    else trailerVideo.pause();
+  });
+}
 
 /* ---------- звёздное небо: редкое плавное мерцание и метеоры ---------- */
 (function initSky() {

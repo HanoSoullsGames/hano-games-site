@@ -490,6 +490,7 @@ h2::before {
 .video-block { margin: 30px 0 0; }
 
 .video-frame {
+  position: relative;
   border: 2px solid var(--line);
   background: #000;
   aspect-ratio: 16 / 9;
@@ -508,6 +509,29 @@ h2::before {
   height: 100%;
   object-fit: contain;
   background: #000;
+  cursor: pointer;
+}
+
+.sound-toggle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(5, 5, 12, 0.78);
+  border: 1px solid rgba(255, 159, 28, 0.5);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.sound-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(5, 5, 12, 0.92);
 }
 
 .video-block .note { margin-top: 10px; }
