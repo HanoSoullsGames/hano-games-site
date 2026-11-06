@@ -7,6 +7,13 @@ const SUPPORT_URL = '';   // например: 'https://boosty.to/hanosouls'
 const DOWNLOAD_URL = 'https://github.com/HanoSoullsGames/pixel-rampage/releases/download/v0.2.0/PixelRampage-Windows.zip';
 const PLAY_URL = 'game/index.html'; // WebGL-сборка лежит в папке game
 
+// контакты: заполни нужное, пустые пункты не показываются
+const CONTACTS = {
+  telegram: '', // ник без @, например 'hanosouls'
+  email: '',    // например 'hi@hanogames.com'
+  vk: ''        // например 'hanogames'
+};
+
 // страница может лежать во вложенной папке (например /en/)
 const ROOT = document.body.dataset.root || '';
 
@@ -19,6 +26,7 @@ const I18N = {
 
     'nav.games': 'Игры',
     'nav.about': 'Обо мне',
+    'nav.contact': 'Контакты',
     'nav.support': 'Поддержать',
 
     'hero.kicker': 'Независимый разработчик',
@@ -59,6 +67,18 @@ const I18N = {
 
     'support.title': 'Поддержать',
     'support.text': 'Игры бесплатные. Если хочется отблагодарить меня — можно поддержать на Boosty. Это помогает делать следующие игры.',
+
+    'contact.title': 'Связаться',
+    'contact.sub': 'Открыт к предложениям: заказ игры, коллаборация или просто вопрос.',
+    'contact.telegram': 'Telegram',
+    'contact.email': 'Почта',
+    'contact.vk': 'VK',
+
+    'nf.title': 'Страница не найдена',
+    'nf.text': 'Похоже, эту страницу разнесли на пиксели.',
+    'nf.home': 'На главную',
+    'btn.share': 'Поделиться',
+    'toast.copied': 'Ссылка скопирована',
     'support.note': 'Ссылка на Boosty скоро появится.',
 
     'footer.made': 'Сделано вручную. С любовью к пикселям.',
@@ -101,6 +121,7 @@ const I18N = {
 
     'nav.games': 'Games',
     'nav.about': 'About me',
+    'nav.contact': 'Contacts',
     'nav.support': 'Support',
 
     'hero.kicker': 'Independent developer',
@@ -141,6 +162,18 @@ const I18N = {
     'support.title': 'Support',
     'support.text': 'Games are free. If you would like to thank me, you can support me on Boosty. It helps make the next games.',
     'support.note': 'The Boosty link is coming soon.',
+
+    'contact.title': 'Get in touch',
+    'contact.sub': 'Open to offers: a game commission, collaboration, or just a question.',
+    'contact.telegram': 'Telegram',
+    'contact.email': 'Email',
+    'contact.vk': 'VK',
+
+    'nf.title': 'Page not found',
+    'nf.text': 'Looks like this page was shattered into pixels.',
+    'nf.home': 'Back to home',
+    'btn.share': 'Share',
+    'toast.copied': 'Link copied',
 
     'footer.made': 'Handmade. With love for pixels.',
 
@@ -292,6 +325,20 @@ document.querySelectorAll('[data-action]').forEach(el => {
       return;
     }
 
+    if (action === 'share') {
+      const url = location.href.split('#')[0];
+      if (navigator.share) {
+        navigator.share({ title: document.title, url }).catch(() => {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(url)
+          .then(() => toast(t('toast.copied')))
+          .catch(() => toast(url));
+      } else {
+        toast(url);
+      }
+      return;
+    }
+
     if (action === 'play') {
       if (PLAY_URL) openExternal(PLAY_URL);
       else toast(t('toast.soon'));
@@ -311,6 +358,35 @@ if (langButton && langButton.tagName === 'BUTTON') {
 }
 
 applyLang();
+
+/* ---------- контакты: показываем только заполненные ---------- */
+(function initContacts() {
+  const links = {
+    'contact-telegram': CONTACTS.telegram ? `https://t.me/${CONTACTS.telegram}` : '',
+    'contact-email': CONTACTS.email ? `mailto:${CONTACTS.email}` : '',
+    'contact-vk': CONTACTS.vk ? `https://vk.com/${CONTACTS.vk}` : ''
+  };
+
+  let any = false;
+  Object.keys(links).forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (links[id]) {
+      el.href = links[id];
+      el.hidden = false;
+      any = true;
+    } else {
+      el.remove();
+    }
+  });
+
+  if (!any) {
+    const section = document.getElementById('contact');
+    if (section) section.remove();
+    const navLink = document.getElementById('nav-contact');
+    if (navLink) navLink.remove();
+  }
+})();
 
 /* ---------- трейлер: звук и пауза ---------- */
 

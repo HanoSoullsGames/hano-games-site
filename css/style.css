@@ -20,6 +20,28 @@
 
 * { box-sizing: border-box; }
 
+[hidden] { display: none !important; }
+
+.notfound {
+  min-height: 60vh;
+  padding: 80px 24px 40px;
+  text-align: center;
+}
+
+.notfound h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(28px, 5vw, 44px);
+}
+
+.notfound .sub {
+  color: var(--dim);
+  margin: 0 0 26px;
+}
+
+.notfound .actions {
+  justify-content: center;
+}
+
 html { background: var(--bg); scroll-behavior: smooth; }
 
 body {
