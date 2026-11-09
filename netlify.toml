@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/void-weaver"
+  to = "/void-weaver.html"
+  status = 200
