@@ -5,3 +5,6 @@ Thumbs.db
 
 # Локальные архивы
 *.zip
+
+# Local Netlify folder
+.netlify
