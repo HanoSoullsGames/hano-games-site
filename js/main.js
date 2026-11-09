@@ -335,6 +335,12 @@ function applyLang() {
     img.src = `${ROOT}img/shots/${lang}-${img.dataset.shot}.webp`;
   });
 
+  // обложки с языковыми версиями
+  document.querySelectorAll('img[data-src-ru]').forEach(img => {
+    const src = lang === "en" ? img.dataset.srcEn : img.dataset.srcRu;
+    if (src) img.src = src;
+  });
+
   // трейлер: своя версия под каждый язык, автозапуск без звука
   const trailer = document.getElementById('trailer');
   if (trailer && trailer.dataset.lang !== lang) {
