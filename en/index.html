@@ -52,6 +52,7 @@
       <a href="#about" data-i18n="nav.about">About me</a>
       <a href="#contact" id="nav-contact" data-i18n="nav.contact">Contacts</a>
       <a href="#support" data-i18n="nav.support">Support</a>
+      <a href="#community" data-i18n="nav.community">Community</a>
     </nav>
     <a class="lang" id="lang" href="../index.html?lang=ru" aria-label="Переключить на русский">RU</a>
   </div>
@@ -105,7 +106,7 @@
       <div class="portfolio">
         <a class="game-card" href="../game.html">
           <div class="game-card-art">
-            <img src="../img/cover-800x470_en.webp" alt="Pixel Rampage">
+            <img src="../img/cover-pixel-800x470.webp" alt="Pixel Rampage">
           </div>
           <div class="game-card-body">
             <span class="tag" data-i18n="game.tag">Arcade · PC · Browser</span>
@@ -115,6 +116,17 @@
           </div>
         </a>
 
+        <a class="game-card" href="void-weaver.html">
+          <div class="game-card-art">
+            <img src="img/cover-800x470_vw.webp" alt="Void Weaver" loading="lazy">
+          </div>
+          <div class="game-card-body">
+            <span class="tag" data-i18n="vw.card.tag">Рогалик-шутер · ПК · Браузер</span>
+            <h3>Void Weaver</h3>
+            <p data-i18n="vw.card.short">Град пуль, боссы, модули и ежедневный забег. Играй в браузере или на телефоне.</p>
+            <span class="more" data-i18n="game.open">Подробнее →</span>
+          </div>
+        </a>
         <div class="game-card soon-card">
           <div class="soon-inner">
             <span class="tag" data-i18n="portfolio.soon.tag">In development</span>
@@ -134,6 +146,18 @@
         <a class="btn primary" id="contact-telegram" href="#" hidden data-i18n="contact.telegram">Telegram</a>
         <a class="btn ghost" id="contact-email" href="#" hidden data-i18n="contact.email">Email</a>
         <a class="btn ghost" id="contact-vk" href="#" hidden data-i18n="contact.vk">VK</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="community">
+    <div class="wrap">
+      <div class="support-panel">
+        <div>
+          <h2 data-i18n="community.title">Community</h2>
+          <p data-i18n="community.text">A big friendly community of gamers. A place to find friends and people with the same goals — games, development and everything around them.</p>
+        </div>
+        <a class="btn primary" href="https://discord.gg/8kCTWJewCb" target="_blank" rel="noopener" data-i18n="community.join">Join Discord</a>
       </div>
     </div>
   </section>
@@ -159,6 +183,7 @@
       <a href="https://github.com/HanoSoullsGames/pixel-rampage" target="_blank" rel="noopener">GitHub</a>
       <a href="https://hanosoulls.itch.io/pixel-rampage" target="_blank" rel="noopener">itch.io</a>
       <a href="https://boosty.to/hano.games" target="_blank" rel="noopener">Boosty</a>
+      <a href="https://discord.gg/8kCTWJewCb" target="_blank" rel="noopener">Discord</a>
       <a href="../index.html" hreflang="ru">Русская версия</a>
       <span data-i18n="footer.made">Handmade. With love for pixels.</span>
     </span>
@@ -167,6 +192,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 </body>
 </html>

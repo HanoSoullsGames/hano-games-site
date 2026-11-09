@@ -62,14 +62,50 @@ const I18N = {
     'portfolio.title': 'Портфолио',
     'portfolio.sub': 'Игры, которые можно поиграть прямо сейчас!',
     'portfolio.soon.tag': 'В разработке',
-    'portfolio.soon.title': 'Следующая игра',
-    'portfolio.soon.text': 'Пока в заметках. Как только появится что показать — будет здесь.',
+    'portfolio.soon.title': 'Гравитон',
+    'portfolio.soon.text': 'Гравитационный платформер в разработке: переворот гравитации, свободный прицел и бой с окружением.',
 
     'support.title': 'Поддержать',
     'support.text': 'Игры бесплатные. Если хочется отблагодарить меня — можно поддержать на Boosty. Это помогает делать следующие игры.',
 
     'contact.title': 'Связаться',
     'contact.sub': 'Открыт к предложениям: заказ игры, коллаборация или просто вопрос.',
+
+    'nav.community': 'Сообщество',
+    'community.title': 'Сообщество',
+    'community.text': 'Большое дружное сообщество геймеров. Здесь можно найти друзей и товарищей с общими целями — по играм, разработке и всему вокруг.',
+    'community.join': 'Вступить в Discord',
+
+    'vw.tag': 'Рогалик-шутер · ПК · Браузер · Телефон',
+    'vw.lead': 'Ткач пустоты пробивается через сектора: град пуль, graze-механика, модули и боссы. Каждый забег — новый маршрут по карте секторов, а ежедневный забег даёт один общий вызов для всех.',
+    'vw.play': 'Играть в браузере',
+    'vw.download': 'Скачать для Windows',
+    'vw.dl.note': 'Windows 10/11 · exe · 105 МБ · без установки',
+    'vw.dl.soon': 'ПК-версия выкладывается. Сейчас игра доступна в браузере — на ПК и телефоне.',
+    'vw.features.title': 'Особенности',
+    'vw.f1': 'Кампания с боссами и Boss Rush',
+    'vw.f2': 'Карта секторов: элитные и аномальные узлы',
+    'vw.f3': 'Модули, скины и комбо-билды',
+    'vw.f4': 'Graze-механика и ранги за забег',
+    'vw.f5': 'Ежедневный забег — общий вызов',
+    'vw.f6': 'Сохранение забега, пауза и настройки',
+    'vw.f7': 'Русский и английский языки',
+    'vw.f8': 'Управление мышью и стиками на телефоне',
+    'vw.controls.title': 'Управление',
+    'vw.c.mouse': 'Мышь',
+    'vw.c.lmb': 'ЛКМ',
+    'vw.c1': 'движение',
+    'vw.c2': 'прицел',
+    'vw.c3': 'огонь',
+    'vw.c4': 'рывок',
+    'vw.c5': 'пауза',
+    'vw.c6': 'язык RU/EN',
+    'vw.mobile.note': 'На телефоне управление появляется автоматически: два стика и кнопки способностей.',
+    'vw.specs.platform': 'Windows, браузер, мобильный браузер',
+    'vw.specs.version': 'Версия',
+    'vw.card.tag': 'Рогалик-шутер · ПК · Браузер',
+    'vw.card.short': 'Град пуль, боссы, модули и ежедневный забег. Играй в браузере или на телефоне.',
+    'vw.trailer.note': 'Короткий трейлер без звука — нажми, чтобы запустить.',
     'contact.telegram': 'Telegram',
     'contact.email': 'Почта',
     'contact.vk': 'VK',
@@ -156,7 +192,7 @@ const I18N = {
     'portfolio.title': 'Portfolio',
     'portfolio.sub': 'Games you can play right now!',
     'portfolio.soon.tag': 'In development',
-    'portfolio.soon.title': 'Next game',
+    'portfolio.soon.title': 'Graviton',
     'portfolio.soon.text': 'Still in notes. As soon as there is something to show, it will be here.',
 
     'support.title': 'Support',
@@ -165,6 +201,42 @@ const I18N = {
 
     'contact.title': 'Get in touch',
     'contact.sub': 'Open to offers: a game commission, collaboration, or just a question.',
+
+    'nav.community': 'Community',
+    'community.title': 'Community',
+    'community.text': 'A big friendly community of gamers. A place to find friends and people with the same goals — games, development and everything around them.',
+    'community.join': 'Join Discord',
+
+    'vw.tag': 'Roguelite shooter · PC · Browser · Mobile',
+    'vw.lead': 'The Void Weaver fights through sectors: bullet hell, graze mechanics, modules and bosses. Every run is a new route across the sector map, and the daily run is one shared challenge.',
+    'vw.play': 'Play in browser',
+    'vw.download': 'Download for Windows',
+    'vw.dl.note': 'Windows 10/11 · exe · 105 MB · no installation',
+    'vw.dl.soon': 'The PC build is being uploaded. For now the game is playable in the browser — on PC and mobile.',
+    'vw.features.title': 'Features',
+    'vw.f1': 'Campaign with bosses and Boss Rush',
+    'vw.f2': 'Sector map with elite and anomaly nodes',
+    'vw.f3': 'Modules, skins and combo builds',
+    'vw.f4': 'Graze mechanics and run ranks',
+    'vw.f5': 'Daily run — one shared challenge',
+    'vw.f6': 'Run saving, pause and settings',
+    'vw.f7': 'Russian and English',
+    'vw.f8': 'Mouse controls and touch sticks on mobile',
+    'vw.controls.title': 'Controls',
+    'vw.c.mouse': 'Mouse',
+    'vw.c.lmb': 'LMB',
+    'vw.c1': 'move',
+    'vw.c2': 'aim',
+    'vw.c3': 'fire',
+    'vw.c4': 'dash',
+    'vw.c5': 'pause',
+    'vw.c6': 'language RU/EN',
+    'vw.mobile.note': 'On mobile the controls appear automatically: two sticks and ability buttons.',
+    'vw.specs.platform': 'Windows, browser, mobile browser',
+    'vw.specs.version': 'Version',
+    'vw.card.tag': 'Roguelite shooter · PC · Browser',
+    'vw.card.short': 'Bullet hell, bosses, modules and a daily run. Play in browser or on mobile.',
+    'vw.trailer.note': 'Short silent trailer — click to play.',
     'contact.telegram': 'Telegram',
     'contact.email': 'Email',
     'contact.vk': 'VK',
@@ -267,8 +339,10 @@ function applyLang() {
   const trailer = document.getElementById('trailer');
   if (trailer && trailer.dataset.lang !== lang) {
     trailer.dataset.lang = lang;
-    trailer.poster = `${ROOT}media/poster-${lang}.jpg`;
-    trailer.src = `${ROOT}media/trailer-${lang}.mp4`;
+    const trailerBase = trailer.dataset.videoBase || `${ROOT}media/trailer`;
+    const posterBase = trailer.dataset.posterBase || `${ROOT}media/poster`;
+    trailer.poster = `${posterBase}-${lang}.jpg`;
+    trailer.src = `${trailerBase}-${lang}.mp4`;
     trailer.load();
     playTrailer(trailer);
   }

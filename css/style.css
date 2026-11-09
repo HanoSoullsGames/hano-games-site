@@ -436,6 +436,14 @@ h2::before {
 .support-panel h2 { margin-bottom: 10px; }
 .support-panel p { margin: 0; color: #c8c7d9; max-width: 52ch; }
 
+/* ---------- Hero-скриншот игры ---------- */
+.hero-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(120, 120, 180, 0.18);
+}
+
 /* ---------- Footer ---------- */
 .foot {
   margin-top: 40px;

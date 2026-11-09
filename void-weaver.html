@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Void Weaver — Hano Games</title>
+<meta name="description" content="Void Weaver — рогалик-шутер с градом пуль: сектора, боссы, модули, скины и ежедневный забег. Играй в браузере на ПК и телефоне.">
+<meta property="og:title" content="Void Weaver">
+<meta property="og:description" content="Рогалик-шутер про ткача пустоты: сектора, боссы, модули и ежедневный забег.">
+<meta property="og:image" content="https://hano-games.netlify.app/img/og-vw.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="canonical" href="https://hano-games.netlify.app/void-weaver.html">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/dotgothic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114110153', 'ym');
+
+    ym(114110153, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114110153" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body data-page="game">
+<div id="starfield" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="index.html">
+      <img src="img/logo.png" alt="" width="34" height="34">
+      <span>Hano Games</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#portfolio" data-i18n="nav.games">Игры</a>
+      <a href="index.html#about" data-i18n="nav.about">Обо мне</a>
+      <a href="index.html#support" data-i18n="nav.support">Поддержать</a>
+    </nav>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">EN</button>
+  </div>
+</header>
+
+<main class="wrap game-page">
+  <a class="back" href="index.html#portfolio" data-i18n="game.back">← Все игры</a>
+
+  <div class="game-head">
+    <div>
+      <span class="tag" data-i18n="vw.tag">Рогалик-шутер · ПК · Браузер · Телефон</span>
+      <h1>Void Weaver</h1>
+      <p class="lead" data-i18n="vw.lead">Ткач пустоты пробивается через сектора: град пуль, graze-механика, модули и боссы. Каждый забег — новый маршрут по карте секторов, а ежедневный забег даёт один общий вызов для всех.</p>
+      <div class="actions">
+        <a class="btn primary" href="games/void-weaver/" data-i18n="vw.play">Играть в браузере</a>
+        <a class="btn ghost" href="#pc" data-i18n="vw.download">Скачать для Windows</a>
+        <button class="btn ghost" type="button" data-action="share" data-i18n="btn.share">Поделиться</button>
+      </div>
+      <p class="note" data-i18n="vw.dl.note">Windows 10/11 · exe · 105 МБ · без установки</p>
+      <p class="note" id="pc">
+        <span data-i18n="vw.dl.soon">ПК-версия выкладывается. Сейчас игра доступна в браузере — на ПК и телефоне.</span>
+      </p>
+    </div>
+  </div>
+
+  <section class="block">
+    <img class="hero-shot" src="img/cover-vw-wide.jpg" alt="Void Weaver" width="1280" height="752" loading="lazy">
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="vw.features.title">Особенности</h2>
+    <ul class="features">
+      <li data-i18n="vw.f1">Кампания с боссами и Boss Rush</li>
+      <li data-i18n="vw.f2">Карта секторов: элитные и аномальные узлы</li>
+      <li data-i18n="vw.f3">Модули, скины и комбо-билды</li>
+      <li data-i18n="vw.f4">Graze-механика и ранги за забег</li>
+      <li data-i18n="vw.f5">Ежедневный забег — общий вызов</li>
+      <li data-i18n="vw.f6">Сохранение забега, пауза и настройки</li>
+      <li data-i18n="vw.f7">Русский и английский языки</li>
+      <li data-i18n="vw.f8">Управление мышью и стиками на телефоне</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="game.shots.title">Скриншоты</h2>
+    <div class="gallery">
+      <img src="img/shots/ru-vw-01_menu.webp" data-shot="vw-01_menu" alt="" loading="lazy">
+      <img src="img/shots/ru-vw-02_intro.webp" data-shot="vw-02_intro" alt="" loading="lazy">
+      <img src="img/shots/ru-vw-03_action.webp" data-shot="vw-03_action" alt="" loading="lazy">
+      <img src="img/shots/ru-vw-04_shop.webp" data-shot="vw-04_shop" alt="" loading="lazy">
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="vw.controls.title">Управление</h2>
+    <dl class="specs">
+      <div><dt>WASD / стрелки</dt><dd data-i18n="vw.c1">движение</dd></div>
+      <div><dt data-i18n="vw.c.mouse">Мышь</dt><dd data-i18n="vw.c2">прицел</dd></div>
+      <div><dt data-i18n="vw.c.lmb">ЛКМ</dt><dd data-i18n="vw.c3">огонь</dd></div>
+      <div><dt>Space / Shift</dt><dd data-i18n="vw.c4">рывок</dd></div>
+      <div><dt>P / Esc</dt><dd data-i18n="vw.c5">пауза</dd></div>
+      <div><dt>L</dt><dd data-i18n="vw.c6">язык RU/EN</dd></div>
+    </dl>
+    <p class="note" data-i18n="vw.mobile.note">На телефоне управление появляется автоматически: два стика и кнопки способностей.</p>
+  </section>
+
+  <section class="block">
+    <h2 data-i18n="game.specs.title">Детали</h2>
+    <dl class="specs">
+      <div><dt data-i18n="specs.platform">Платформы</dt><dd data-i18n="vw.specs.platform">Windows, браузер, мобильный браузер</dd></div>
+      <div><dt data-i18n="specs.lang">Языки</dt><dd data-i18n="specs.lang.value">Русский, английский</dd></div>
+      <div><dt data-i18n="specs.price">Цена</dt><dd data-i18n="specs.price.value">Бесплатно</dd></div>
+      <div><dt data-i18n="specs.year">Год</dt><dd>2026</dd></div>
+      <div><dt data-i18n="vw.specs.version">Версия</dt><dd>1.4.2</dd></div>
+    </dl>
+  </section>
+
+  <section class="block support-panel" id="support">
+    <div>
+      <h2 data-i18n="support.title">Поддержать</h2>
+      <p data-i18n="support.text">Игры бесплатные. Если хочется отблагодарить — можно поддержать на Boosty. Это помогает делать следующие.</p>
+    </div>
+    <button class="btn primary" type="button" data-action="support" data-i18n="btn.support">Поддержать на Boosty</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Hano Games</span>
+    <span class="foot-links">
+      <a href="https://github.com/HanoSoullsGames/pixel-rampage" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://hanosoulls.itch.io/pixel-rampage" target="_blank" rel="noopener">itch.io</a>
+      <a href="https://boosty.to/hano.games" target="_blank" rel="noopener">Boosty</a>
+      <a href="https://discord.gg/8kCTWJewCb" target="_blank" rel="noopener">Discord</a>
+      <span data-i18n="footer.made">Сделано вручную. С любовью к пикселям.</span>
+    </span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
