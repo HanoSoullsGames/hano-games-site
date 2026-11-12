@@ -54,6 +54,8 @@ const I18N = {
 
     'skills.gamedesign': 'Game design',
     'skills.unity': 'Unity и C#',
+    'skills.godot': 'Godot и GDScript',
+    'skills.web': 'Веб-разработка',
     'skills.gameplay': 'Геймплей и механики',
     'skills.ui': 'UI и интерфейсы',
     'skills.optimization': 'Оптимизация',
@@ -184,6 +186,8 @@ const I18N = {
 
     'skills.gamedesign': 'Game design',
     'skills.unity': 'Unity & C#',
+    'skills.godot': 'Godot & GDScript',
+    'skills.web': 'Web development',
     'skills.gameplay': 'Gameplay & mechanics',
     'skills.ui': 'UI & interfaces',
     'skills.optimization': 'Optimization',
